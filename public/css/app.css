@@ -1,0 +1,83 @@
+#heading {
+    width: 101%;
+    background-color: #e9ecef;
+    padding: 16px;
+    margin: 5px auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
+}
+
+main{
+    margin-top: 5.5rem;
+}
+
+.fas.fa-heart{
+    color: red;
+}
+
+.icon{
+    margin: 10px;
+    font-size: 25px;
+}
+
+.login-head {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+.login-head i{
+    margin-top: 10px;
+    z-index: 10;
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+    padding: 22px;
+    border-radius: 100px;
+    background-color: #403d39;
+}
+
+.img{
+    height: 550px;
+}
+
+.login-box{
+    z-index: 5;
+    border-radius: 30px;
+    box-shadow: 2px 5px 5px rgb(112, 109, 109);
+    background-color:  rgb(197, 197, 209);
+}
+
+.new{
+    font-weight: bolder;
+}
+
+.hd{
+    font-size: 17px;
+    font-family: cursive;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+.cart{
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.login-btn{
+    background-color: #403d39;
+    color: white;
+    font-size: 15px;
+    margin-left: 40px;
+}
+.tag{
+    text-decoration: none;
+}
+
+.tag:visited{
+    color: black;
+    
+}
+

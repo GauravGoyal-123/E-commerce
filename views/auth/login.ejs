@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') -%>
+<div class="row">
+ <h2 style="margin-left: 560px; margin-top: 10px; display: inline-block; font-size: 3rem;"> <i class="fas fa-shopping-basket mx-2" style="margin:0px auto; font-size: 3rem;"></i>Crucio</h2>
+ <h6 style="margin-left: 580px; margin-top: 5px;  font-size: 1.5rem;">Always Be in Style!</h6>
+    <div class="login-head">
+        <i class="far fa-user"></i>
+    </div>
+    <div class="col-md-4 mx-auto login-box" style="border: 2px solid rgb(51, 50, 50);">
+        <%- include('../partials/flash')  %> 
+        <form action="/login" class="validated-form mt-4 py-4" method="POST"  novalidate>
+            <div class="mb-3 d-flex justify-content-center align-item-center">
+                <i class="fas fa-user icon"></i>
+                <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="mb-3  d-flex justify-content-center align-item-center">
+                <i class="fas fa-lock icon"></i>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <button class="btn btn-sm login-btn" type="submit">Login</button>
+            <p class="px-4 hd">New to Crucio? Create an account <a href="/register">Click here </a> </p>
+                
+            
+        </form>
+    </div>
+    
+</div>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.validated-form')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+</script>

@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row container-fluid" style="overflow-y: hidden;">
+    <div class="col-lg-6 md-2 sm-2 xs-1 m-0">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/689/222/original/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" alt="" class="img-fluid img">
+    </div>
+    <div class="col-lg-4 md-2 sm-2 xs-1 mx-auto m-2">
+        <%- include('../partials/flash')  %> 
+        <h1 class="dispaly-6 my-4">Sign Up</h1>
+        <form action="/register" class="validated-form" method="POST"  novalidate>
+            <div class="mb-3 d-flex justify-content-center align-item-center">
+                <i class="fas fa-user icon"></i>
+                <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="mb-3 d-flex justify-content-center align-item-center">
+                <i class="fas fa-envelope icon"></i>
+                <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <p class="mb-2 mx-4">Want to register as ? </p>
+            <div class="input-group mb-3 mx-4">
+                
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="radio" name="role" value="buyer" aria-label="Radio button for following text input">
+                    <span class="mx-1"> Buyer </span>
+                </div>
+                
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="radio" name="role" value="seller" aria-label="Radio button for following text input">
+                    <span class="mx-1"> Seller </span>
+                </div>
+            </div>
+            <div class="mb-3 d-flex justify-content-center align-item-center">
+                <i class="fas fa-lock icon"></i>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <button class="btn btn-success btn-sm mx-4" type="submit">SignUp</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.validated-form')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+</script>
